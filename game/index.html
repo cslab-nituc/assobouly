@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>assembler</title>
+    <script src="https://pixijs.download/release/pixi.js"></script>
+</head>
+
+<body>
+    <input type="button" value="free" onclick="qchange(0)">
+    <input type="button" value="1問目" onclick="qchange(1)">
+    <input type="button" value="2問目" onclick="qchange(2)">
+    <input type="button" value="3問目" onclick="qchange(3)">
+    <br>
+    <input type="button" value="init" onclick="init()">
+    <!-- <input type="button" value="test2" onclick="Screen()"> -->
+    <input type="button" value="change" onclick="change()">
+    <div>
+        <div class="form">
+            <select name="com" id="command">
+                <option value="0">NOTHING</option>
+                <option value="1">SaveA</option>
+                <option value="2">SaveB</option>
+                <option value="3">LoadA</option>
+                <option value="4">LoadB</option>
+                <option value="5">AddA</option>
+                <option value="6">AddB</option>
+                <option value="7">Jump</option>
+                <option value="8">IfA</option>
+                <option value="9">IfB</option>
+                <option value="10">ScanA</option>
+                <option value="11">ScanB</option>
+                <option value="12">END</option>
+            </select>
+            <input name="op" type="number" value="0" min="0" max="15" step="1" id="op">
+        </div>
+        <div class="action">
+            <button id="buttonExecute">決定</button>
+        </div>
+    </div>
+
+    <script src="script/assembler.js"></script>
+    <script src="script/question.js"></script>
+    <script src="script/assembler_exe.js"></script>
+    <script src="script/pixijs.js"></script>
+    <hr>
+    <small> (c) 2022 武廣亜佑美/宇部高専制御情報工学科計算機科学実験室</small>
+</body>
+</html>
