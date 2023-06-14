@@ -8,8 +8,7 @@
 {\ttfamily \#include \char`\"{}assembler.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
-Include dependency graph for assembler.\+c\+:
-\nopagebreak
+Include dependency graph for assembler.\+c\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -23,9 +22,9 @@ Include dependency graph for assembler.\+c\+:
 \begin{DoxyCompactList}\small\item\em 関数 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{assembler_8c_a799eec15b0f2dfa773d0fbab07e7f5bf}\label{assembler_8c_a799eec15b0f2dfa773d0fbab07e7f5bf}} 
 \mbox{\hyperlink{structCode}{Code}} \mbox{\hyperlink{assembler_8c_a799eec15b0f2dfa773d0fbab07e7f5bf}{decode}} (\mbox{\hyperlink{assembler_8h_a6adc0541fbd725483c8d2867f68fc37e}{Code\+Id}} cid)
-\begin{DoxyCompactList}\small\item\em \+: コード\+I\+Dをコード型の構造体に変換する。 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \+: コード\+IDをコード型の構造体に変換する。 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{assembler_8h_a6adc0541fbd725483c8d2867f68fc37e}{Code\+Id}} \mbox{\hyperlink{assembler_8c_a4bea27b1e6b70cc4ce45d2f1255587b2}{encode}} (Command com, \mbox{\hyperlink{assembler_8h_ab44e562e83c947d24a8a6053988f43a4}{Operand}} op)
-\begin{DoxyCompactList}\small\item\em コマンド番号とオペランドをコード\+I\+Dに変換する。 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em コマンド番号とオペランドをコード\+IDに変換する。 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{assembler_8c_a96028cf9c56e0d4e8ffb2306ec794aa2}{exec}} (\mbox{\hyperlink{structState}{Statep}} sp, const \mbox{\hyperlink{structCode}{Code}} $\ast$cp)
 \begin{DoxyCompactList}\small\item\em コードを実行し、状態を変化させる。 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{assembler_8c_a05293c568d993210f30952bc64e17905}\label{assembler_8c_a05293c568d993210f30952bc64e17905}} 
@@ -39,7 +38,7 @@ void \mbox{\hyperlink{assembler_8c_a2b7fcdba8cb894810e5a95453af0d19d}{print\+Sta
 アセンブリ言語（簡易）のシミュレータ 
 
 \begin{DoxyAuthor}{Author}
-Makoto T\+A\+N\+A\+BE (\href{mailto:tanabe@ube-k.ac.jp}{\texttt{ tanabe@ube-\/k.\+ac.\+jp}}) 
+Makoto TANABE (\href{mailto:tanabe@ube-k.ac.jp}{\texttt{ tanabe@ube-\/k.\+ac.\+jp}}) 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
 0.\+1 
@@ -61,7 +60,7 @@ Copyright (c) 2022
 
 
 
-コマンド番号とオペランドをコード\+I\+Dに変換する。 
+コマンド番号とオペランドをコード\+IDに変換する。 
 
 
 \begin{DoxyParams}{Parameters}
@@ -100,7 +99,7 @@ Code\+Id コード\+ID
 
 関数 
 
-\+: その状態（の\+P\+Cカウンタが挿す）におけるコードの\+I\+Dを取得する。 \mbox{\Hypertarget{assembler_8c_a2b7fcdba8cb894810e5a95453af0d19d}\label{assembler_8c_a2b7fcdba8cb894810e5a95453af0d19d}} 
+\+: その状態（の\+PCカウンタが挿す）におけるコードの\+IDを取得する。 \mbox{\Hypertarget{assembler_8c_a2b7fcdba8cb894810e5a95453af0d19d}\label{assembler_8c_a2b7fcdba8cb894810e5a95453af0d19d}} 
 \index{assembler.c@{assembler.c}!printState@{printState}}
 \index{printState@{printState}!assembler.c@{assembler.c}}
 \doxysubsubsection{\texorpdfstring{printState()}{printState()}}

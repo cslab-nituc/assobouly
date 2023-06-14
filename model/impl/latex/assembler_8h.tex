@@ -5,8 +5,7 @@
 アセンブリ言語（簡易）のシミュレータ  
 
 
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,32 +16,32 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structCode}{Code}}
-\begin{DoxyCompactList}\small\item\em コード型。コマンドとオペランドを持つ。コード\+I\+D型とほぼ同等だが、実装方法が異なるかもしれないので区別する。 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em コード型。コマンドとオペランドを持つ。コード\+ID型とほぼ同等だが、実装方法が異なるかもしれないので区別する。 \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structState}{State}}
 \begin{DoxyCompactList}\small\item\em 状態を表す型（構造体）。 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{assembler_8h_a8bf026b52dc5ddc914f3913e0642dfd9}\label{assembler_8h_a8bf026b52dc5ddc914f3913e0642dfd9}} 
-\#define \mbox{\hyperlink{assembler_8h_a8bf026b52dc5ddc914f3913e0642dfd9}{C\+O\+M\+M\+A\+N\+D\+\_\+\+B\+I\+TS}}~4
+\#define \mbox{\hyperlink{assembler_8h_a8bf026b52dc5ddc914f3913e0642dfd9}{COMMAND\+\_\+\+BITS}}~4
 \begin{DoxyCompactList}\small\item\em コマンドのビット数 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{assembler_8h_a4cd12719bc4eb13e5f366a1e0333e4f9}\label{assembler_8h_a4cd12719bc4eb13e5f366a1e0333e4f9}} 
-\#define \mbox{\hyperlink{assembler_8h_a4cd12719bc4eb13e5f366a1e0333e4f9}{O\+P\+E\+R\+A\+N\+D\+\_\+\+B\+I\+TS}}~4
+\#define \mbox{\hyperlink{assembler_8h_a4cd12719bc4eb13e5f366a1e0333e4f9}{OPERAND\+\_\+\+BITS}}~4
 \begin{DoxyCompactList}\small\item\em オペランドのビット数 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{assembler_8h_ab1fa09cff0f24db59dff94e7625bfb28}\label{assembler_8h_ab1fa09cff0f24db59dff94e7625bfb28}} 
-\#define \mbox{\hyperlink{assembler_8h_ab1fa09cff0f24db59dff94e7625bfb28}{C\+O\+M\+M\+A\+N\+D\+\_\+\+M\+A\+SK}}~0xf
-\begin{DoxyCompactList}\small\item\em コマンドのマスク コマンド= (コード\+ID $>$$>$ O\+P\+E\+R\+A\+N\+D\+\_\+\+B\+I\+TS) \& C\+O\+M\+M\+A\+N\+D\+\_\+\+M\+A\+SK で取り出す。 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{assembler_8h_ab1fa09cff0f24db59dff94e7625bfb28}{COMMAND\+\_\+\+MASK}}~0xf
+\begin{DoxyCompactList}\small\item\em コマンドのマスク コマンド= (コード\+ID $>$$>$ OPERAND\+\_\+\+BITS) \& COMMAND\+\_\+\+MASK で取り出す。 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{assembler_8h_aaf9ac59ac3c23da0685f17d2f03eedf2}\label{assembler_8h_aaf9ac59ac3c23da0685f17d2f03eedf2}} 
-\#define \mbox{\hyperlink{assembler_8h_aaf9ac59ac3c23da0685f17d2f03eedf2}{O\+P\+E\+R\+A\+N\+D\+\_\+\+M\+A\+SK}}~0xf
-\begin{DoxyCompactList}\small\item\em オペランドのマスク オペランド= コード\+ID \& O\+P\+E\+R\+A\+N\+D\+\_\+\+M\+A\+SK で取り出す。 \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{assembler_8h_a5ad3f75a4e38fd9bbed917c71ca4e9e0}{M\+E\+M\+O\+R\+Y\+\_\+\+S\+I\+ZE}}~16
+\#define \mbox{\hyperlink{assembler_8h_aaf9ac59ac3c23da0685f17d2f03eedf2}{OPERAND\+\_\+\+MASK}}~0xf
+\begin{DoxyCompactList}\small\item\em オペランドのマスク オペランド= コード\+ID \& OPERAND\+\_\+\+MASK で取り出す。 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{assembler_8h_a5ad3f75a4e38fd9bbed917c71ca4e9e0}{MEMORY\+\_\+\+SIZE}}~16
 \begin{DoxyCompactList}\small\item\em 状態部分。メモリーの状態、プログラムカウンターの値、レジスターの値から構成される。 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{assembler_8h_a6adc0541fbd725483c8d2867f68fc37e}\label{assembler_8h_a6adc0541fbd725483c8d2867f68fc37e}} 
 typedef unsigned char \mbox{\hyperlink{assembler_8h_a6adc0541fbd725483c8d2867f68fc37e}{Code\+Id}}
-\begin{DoxyCompactList}\small\item\em コード\+I\+D型。 上位ビットがコマンド、下位ビットがオペランド。 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em コード\+ID型。 上位ビットがコマンド、下位ビットがオペランド。 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{assembler_8h_a0589d0764e95a0af0e4edf7d517b116b}\label{assembler_8h_a0589d0764e95a0af0e4edf7d517b116b}} 
 typedef enum \mbox{\hyperlink{assembler_8h_a54d11ed3a6f9986e98f2ae7f7e3d7e8f}{Command\+\_\+tag}} {\bfseries Command}
 \item 
@@ -63,19 +62,19 @@ typedef \mbox{\hyperlink{structState}{State}} $\ast$ {\bfseries Statep}
 \item 
 \mbox{\Hypertarget{assembler_8h_a54d11ed3a6f9986e98f2ae7f7e3d7e8f}\label{assembler_8h_a54d11ed3a6f9986e98f2ae7f7e3d7e8f}} 
 enum \mbox{\hyperlink{assembler_8h_a54d11ed3a6f9986e98f2ae7f7e3d7e8f}{Command\+\_\+tag}} \{ \newline
-{\bfseries N\+O\+T\+H\+I\+NG}, 
-{\bfseries SaveA}, 
-{\bfseries SaveB}, 
-{\bfseries LoadA}, 
-\newline
-{\bfseries LoadB}, 
-{\bfseries AddA}, 
-{\bfseries AddB}, 
-{\bfseries Jump}, 
-\newline
-{\bfseries IfA}, 
-{\bfseries IfB}, 
-{\bfseries End}
+{\bfseries NOTHING}
+, {\bfseries SaveA}
+, {\bfseries SaveB}
+, {\bfseries LoadA}
+, \newline
+{\bfseries LoadB}
+, {\bfseries AddA}
+, {\bfseries AddB}
+, {\bfseries Jump}
+, \newline
+{\bfseries IfA}
+, {\bfseries IfB}
+, {\bfseries End}
  \}
 \begin{DoxyCompactList}\small\item\em コマンド型。 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
@@ -85,9 +84,9 @@ enum \mbox{\hyperlink{assembler_8h_a54d11ed3a6f9986e98f2ae7f7e3d7e8f}{Command\+\
 \begin{DoxyCompactList}\small\item\em 関数 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{assembler_8h_a799eec15b0f2dfa773d0fbab07e7f5bf}\label{assembler_8h_a799eec15b0f2dfa773d0fbab07e7f5bf}} 
 \mbox{\hyperlink{structCode}{Code}} \mbox{\hyperlink{assembler_8h_a799eec15b0f2dfa773d0fbab07e7f5bf}{decode}} (\mbox{\hyperlink{assembler_8h_a6adc0541fbd725483c8d2867f68fc37e}{Code\+Id}} cid)
-\begin{DoxyCompactList}\small\item\em \+: コード\+I\+Dをコード型の構造体に変換する。 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \+: コード\+IDをコード型の構造体に変換する。 \end{DoxyCompactList}\item 
 \mbox{\hyperlink{assembler_8h_a6adc0541fbd725483c8d2867f68fc37e}{Code\+Id}} \mbox{\hyperlink{assembler_8h_a4bea27b1e6b70cc4ce45d2f1255587b2}{encode}} (Command com, \mbox{\hyperlink{assembler_8h_ab44e562e83c947d24a8a6053988f43a4}{Operand}} op)
-\begin{DoxyCompactList}\small\item\em コマンド番号とオペランドをコード\+I\+Dに変換する。 \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em コマンド番号とオペランドをコード\+IDに変換する。 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{assembler_8h_a1a397303fae178edb76be0f3e8c82fa2}{exec}} (\mbox{\hyperlink{structState}{Statep}} sp, const \mbox{\hyperlink{structCode}{Code}} $\ast$code)
 \begin{DoxyCompactList}\small\item\em コードを実行し、状態を変化させる。 \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{assembler_8h_a2b7fcdba8cb894810e5a95453af0d19d}{print\+State}} (\mbox{\hyperlink{structState}{Statep}} sp)
@@ -98,7 +97,7 @@ void \mbox{\hyperlink{assembler_8h_a2b7fcdba8cb894810e5a95453af0d19d}{print\+Sta
 アセンブリ言語（簡易）のシミュレータ 
 
 \begin{DoxyAuthor}{Author}
-Makoto T\+A\+N\+A\+BE (\href{mailto:tanabe@ube-k.ac.jp}{\texttt{ tanabe@ube-\/k.\+ac.\+jp}}) 
+Makoto TANABE (\href{mailto:tanabe@ube-k.ac.jp}{\texttt{ tanabe@ube-\/k.\+ac.\+jp}}) 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
 0.\+1 
@@ -116,7 +115,7 @@ Copyright (c) 2022
 \index{assembler.h@{assembler.h}!MEMORY\_SIZE@{MEMORY\_SIZE}}
 \index{MEMORY\_SIZE@{MEMORY\_SIZE}!assembler.h@{assembler.h}}
 \doxysubsubsection{\texorpdfstring{MEMORY\_SIZE}{MEMORY\_SIZE}}
-{\footnotesize\ttfamily \#define M\+E\+M\+O\+R\+Y\+\_\+\+S\+I\+ZE~16}
+{\footnotesize\ttfamily \#define MEMORY\+\_\+\+SIZE~16}
 
 
 
@@ -133,7 +132,7 @@ Copyright (c) 2022
 
 
 
-コマンド番号とオペランドをコード\+I\+Dに変換する。 
+コマンド番号とオペランドをコード\+IDに変換する。 
 
 
 \begin{DoxyParams}{Parameters}
@@ -172,7 +171,7 @@ Code\+Id コード\+ID
 
 関数 
 
-\+: その状態（の\+P\+Cカウンタが挿す）におけるコードの\+I\+Dを取得する。 \mbox{\Hypertarget{assembler_8h_a2b7fcdba8cb894810e5a95453af0d19d}\label{assembler_8h_a2b7fcdba8cb894810e5a95453af0d19d}} 
+\+: その状態（の\+PCカウンタが挿す）におけるコードの\+IDを取得する。 \mbox{\Hypertarget{assembler_8h_a2b7fcdba8cb894810e5a95453af0d19d}\label{assembler_8h_a2b7fcdba8cb894810e5a95453af0d19d}} 
 \index{assembler.h@{assembler.h}!printState@{printState}}
 \index{printState@{printState}!assembler.h@{assembler.h}}
 \doxysubsubsection{\texorpdfstring{printState()}{printState()}}
